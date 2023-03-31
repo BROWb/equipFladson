@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>SOMANDO VALORES</h1>
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="somar" onclick="somar()">
+    <div id="res">
+        resutado
+
+    </div>
+    <h1>multiplicando</h1>
+    <input type="number" name="txtm1" id="txtm1"> *
+    <input type="number" name="txtm2" id="txtm2">
+    <input type="button" value="multiplicar" onclick="multiplicar()">
+    <div id="resm">
+        resutado
+    </div>
+
+</div>
+<h1>dividindo</h1>
+<input type="number" name="txtd1" id="txtd1"> /
+<input type="number" name="txtd2" id="txtd2">
+<input type="button" value="dividindo" onclick="dividir()">
+<div id="resd">
+    resutado
+</div>
+    <script>
+        function somar(){
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.getElementById('txtn2')
+            var res = window.document.getElementById('res')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 + n2
+            res.innerHTML =s
+        }
+        function multiplicar(){
+            var tm1 = window.document.getElementById('txtm1')
+            var tm2 = window.document.getElementById('txtm2')
+            var resm = window.document.getElementById('resm')
+            var n1m = Number(tm1.value)
+            var n2m = Number(tm2.value)
+            var sm = n1m * n2m
+            resm.innerHTML =sm
+        }
+        function dividir(){
+            var td1 = window.document.getElementById('txtd1')
+            var td2 = window.document.getElementById('txtd2')
+            var resd = window.document.getElementById('resd')
+            var n1d = Number(td1.value)
+            var n2d = Number(td2.value)
+            var sd = n1d / n2d
+            resd.innerHTML =sd
+        }
+    </script>
+</body>
+</html>

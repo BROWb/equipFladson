@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+   
+</head>
+<body>
+    <script src="inicio.js"></script>
+    <div class="geral-login"> 
+        <h1>seu login</h1>
+        <!-- texto tipo 1(o maior) -->
+        <!--criar div para dividir funcoes dos codigos-->
+        <form>
+            <!-- formulario -->
+            <input type="text" placeholder="escreva seu nome:" id="nome">
+            <!-- input: interacao ,type: tipo de texto, placeholder: mensagem q apárece no input, id:declarar nome a tag -->
+            <br><br><!--quebrar linha-->
+            <input type="text" placeholder="escreva o nome da sua mae" id="mae">
+            <br><br>
+            <input type="text" placeholder="seu endereço" id="ende">
+            <br><br>
+            <input type="password" placeholder="sua senha" id="senha">
+            <a href="jogo.html"><input type="submit" onclick="logar(); return false" ></a>
+        </form>
+    </div>
+    <script> function logar(){
+        var nome= document.getElementById('nome').value;
+        //var: declarar variavel, getElement:declarar o nome
+        var senha= document.getElementById('senha').value;
+        var mae= document.getElementById('mae').value;
+        var endereco= document.getElementById('endereco').value;
+        if(nome == "fladson" && senha == "123" && mae =="giselda" && endereco == "monte" ){
+            alert("logado com sucesso")
+        }
+        // if:se
+        else{
+            alert("ALGUM DADO ESTA INCORRETO ")
+        }
+    }
+    // else:se nao</script>
+</body>
+</html>

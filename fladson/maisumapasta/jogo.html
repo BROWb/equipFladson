@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="geral">
+        <h1>JOGO DESENVOLVIDO PELA TURMA DE INFORMATICA</h1>
+        <input type="number" placeholder="digite um numero" id="n1">
+        <button onclick="verifican()">enviar</button>
+    </div>
+    
+<div class="container" >
+	<div class="stars" ></div>
+</div>
+
+    <script src="jogo.js"></script>
+    <script>var naleatorio =0;
+        var nerros=0;
+        // aqui declaro as variaveis para armazenar o numero e os erros.
+        
+        function refresh(){
+        naleatorio = parseInt (Math.random() * 60);
+        //gerar numeros aleatorios(math.radom)retira as casas decimais (parseInt).multiplica o 50(*)
+        console.log( naleatorio)
+        }
+        function verifican(){
+            var a = document.getElementById('n1').value
+            if(a > 60 || a < 1 ){
+                alert('aposta inválida')
+                return;
+        
+            }
+            if(a > naleatorio){
+                nerros++;
+                alert('o número para ser encontrado é menor ')
+            }
+            else if(a < naleatorio){
+                nerros++;
+                alert('o número para ser encontardo é maior')
+            }
+            else(
+                alert('parabéns, voce acertou com ' +nerros+ ' tentativas'))
+        }
+        refresh();</script>
+</body>
+</html>
